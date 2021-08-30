@@ -10,6 +10,6 @@ spec:
     app: api-heroes
   type: LoadBalancer
   ports:
-  - port: 3333
+  - port: 80
     protocol: TCP
     targetPort: 3333

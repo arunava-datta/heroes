@@ -16,13 +16,15 @@ spec:
     spec:
       containers:
       - name: api-heroes
-        image: diegomais/heroes
+        image: hyd.ocir.io/axwepzpfvpxt/demorepo/heroes:latest
         env:
           - name: PORT
             value: "3333"
           - name: POSTGRES_DB
             value: heroes
           - name: POSTGRES_HOST
-            value: postgres:mysecretpassword@postgres-svc
+            value: postgres:welcome1@10.4.1.45:5432
         ports:
         - containerPort: 3333
+      imagePullSecrets:
+        - name: ocirsecret
